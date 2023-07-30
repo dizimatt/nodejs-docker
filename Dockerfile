@@ -4,7 +4,7 @@ FROM php:7.4-fpm-alpine
 WORKDIR /code/test-nest
 RUN apk add npm
 RUN npm i -g @nestjs/cli
-CMD ["npm", "run", "start:dev"]
+# CMD ["npm", "run", "start:dev"]
 
 # RUN apk add libxml2-dev
 # RUN docker-php-ext-install soap
