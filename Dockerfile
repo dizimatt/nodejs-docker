@@ -1,8 +1,11 @@
 FROM php:7.4-fpm-alpine
 # PHP extensions
 
+WORKDIR /code/test-nest
 RUN apk add npm
 RUN npm i -g @nestjs/cli
+CMD ["npm", "run", "start:dev"]
+
 # RUN apk add libxml2-dev
 # RUN docker-php-ext-install soap
 # RUN docker-php-ext-install mysqli pdo pdo_mysql
