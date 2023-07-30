@@ -1,0 +1,19 @@
+version: '1'
+
+networks:
+  NODE:
+
+services:
+
+  nodejs:
+    image: php:7.4-fpm-alpine
+    container_name: nodetest-NODEJS
+    volumes:
+      - ./:/code
+    ports:
+      - "3000:3000"
+    networks:
+      - NODE
+    build:
+      context: .
+      dockerfile: Dockerfile
